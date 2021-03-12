@@ -1,4 +1,5 @@
-###关于[MiniDumpWriteDump]Win32 API dump lsass内存
+关于[MiniDumpWriteDump]Win32 API dump lsass内存
+---
 利用MiniDumpWriteDump来dump lsass已经不是一个老的技术了，但是根据网上的实例，我发现了一些问题，网上绝大多数部分，均是使用了OpenProcess 这个Win API打开进程，从而获取lsass.exe的进程句柄，但是根据自己的尝试，发现，在没有debug权限的情况下，OpenProcess会抛出5的错误，及权限不足以打开lsass.exe进程。至此，我将代码进行了完善，使其程序能只在管理员权限下即可dump lsass.exe内存
 ```
 #include <windows.h>
