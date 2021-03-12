@@ -3,6 +3,7 @@
 
 ----
 目前包括
-
-NetUser 利用win32 API绕过杀软来创建用户\n
+NetUser 利用win32 API绕过杀软来创建用户
+--
 MiniDumpWriteDump Win32 API绕过杀软dump lsass.exe内存
+--
